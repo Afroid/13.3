@@ -79,6 +79,13 @@ if ( cluster.isMaster ) { // Code to run if we're in the master process
 		res.sendFile( path.join( __dirname + '/index.html' ) );
 	} );
 
+	app.get( '/tables', function ( req, res ) {
+		res.sendFile( path.join( __dirname + '/tables.html' ) );
+	} );
+
+	app.get( '/reserve', function ( req, res ) {
+		res.sendFile( path.join( __dirname + '/reserve.html' ) );
+	} );
 
 	var server = app.listen( process.env.PORT || 8081, function () {
 		var host = server.address().address;
